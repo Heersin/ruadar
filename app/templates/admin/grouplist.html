@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}RSS 源列表组 {% endblock %}
+
+{% block navbar %}
+<section class="content-header">
+    <h1>RSS 源列表组</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active"> 源列表组 </li>
+    </ol>
+</section>
+{% endblock %}
+
+{% block content %}
+        <div class="row">
+            <div class="list-group">
+                {% for group in groups %}
+                <a href="{{ url_for('admin.list_feed', group_name=group)}}" class="list-group-item">{{ group }}</a>
+                {% endfor %}
+              </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

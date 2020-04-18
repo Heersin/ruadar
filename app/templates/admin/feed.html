@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}文章列表{% endblock %}
+
+{% block navbar %}
+<section class="content-header">
+    <h1>文章列表</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active"> Feed的文章 </li>
+    </ol>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="list-group">
+            {% for article in articles %}
+            <a href="{{ article.link }}" class="list-group-item">{{ article.title }}</a>
+            {% endfor %}
+    <div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

@@ -1,0 +1,3 @@
+CaoShiHong|%|https://cshihong.github.io/atom.xml|%|All
+jie|%|https://crossoverjie.top/atom.xml|%|All
+love|%|http://feed.cnblogs.com/blog/u/185616/rss|%|test

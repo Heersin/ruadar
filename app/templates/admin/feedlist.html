@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}RSS 源列表{% endblock %}
+
+{% block navbar %}
+<section class="content-header">
+    <h1>RSS 源列表</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active"> 源列表 </li>
+    </ol>
+</section>
+{% endblock %}
+
+{% block content %}
+        <div class="row">
+            <div class="list-group">
+                {% for feed in feeds %}
+                <a href="{{feed.feed_link}}" class="list-group-item">{{ feed.feed_name }}</a>
+                {% endfor %}
+              </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

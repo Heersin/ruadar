@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Echarts{% endblock %}
+
+{% block navbar %}
+<section class="content-header">
+    <h1>Echarts</h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">Example</li>
+        <li class="active">Echarts</li>
+    </ol>
+</section>
+{% endblock %}
+
+{%block header_js %}
+<script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+{% endblock %}
+
+{% block css %}
+<link href="{{ url_for('static', filename='assets/plugins/dropzone/dropzone.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+<div class=" box box-primary">
+    <div class="box-header with-border">
+        图表
+    </div>
+    
+    <div class="box-body">
+        <div class="row">
+
+            <div class="col-xl-4">
+                <div class="row text-center m-t-20" style="margin-left: 20px;">
+                            {{ pie_chart | safe }}
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="row text-center m-t-20">
+                        {{ lines_chart | safe }}
+                </div>
+            </div>
+
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div style="margin-left:200px; margin-top:40px;">
+                        {{ table_chart | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-footer">
+        Foot
+    </div>
+</div>
+{% endblock %}
